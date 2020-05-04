@@ -12,7 +12,7 @@ def connect(sock, adresa_receptor):
     Functie care initializeaza conexiunea cu receptorul.
     Returneaza ack_nr de la receptor si window
     '''
-    seq_nr = .. # TODO: setati initial sequence number
+    seq_nr = random.randint(0, MAX_UINT32)
     flags = 'S'
     checksum = 0
     octeti_header_fara_checksum = create_header_emitator(seq_nr, flags, checksum)
